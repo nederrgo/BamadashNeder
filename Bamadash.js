@@ -1,4 +1,4 @@
-function calc(operand1, operand2, operator){
+export function calc(operand1, operand2, operator){
     const regex=/[0-9]+/g
     const regex2=/[0-9]+/g
     if(!regex.test(operand1)||!regex2.test(operand2)){
@@ -18,7 +18,7 @@ function calc(operand1, operand2, operator){
     }
     return NaN;
 }
-function compact(array){
+export function compact(array){
 const array2=[];
 array.forEach(element=> {
     if(!isNaN(element)&&element!=""&&element!=undefined){
@@ -29,14 +29,14 @@ array.forEach(element=> {
 });
 return array2;
 }
-function size(collection ){
+export function size(collection ){
     let countSize=0;
     for(let element in collection) {
             countSize++;
     }
     return countSize;
 }
-function castArray(input){
+export function castArray(input){
     if(Array.isArray(input)){
         return input;
     }
@@ -47,7 +47,7 @@ function castArray(input){
 array.push(input);
 return array;
 }
-function intersection(array1, array2, isStrict){
+export function intersection(array1, array2, isStrict){
     if(isStrict){
         let arrayMarge=[];
         array1.forEach(element => {
@@ -60,8 +60,5 @@ function intersection(array1, array2, isStrict){
         return arrayMarge;
     }
 }
-console.log (calc("2",3,"*"));
-console.log(size("322"));
-console.log(castArray(null));
-console.log(intersection([1,"3"],[1,3],true));
+
 

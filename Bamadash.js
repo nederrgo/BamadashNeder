@@ -47,9 +47,21 @@ function castArray(input){
 array.push(input);
 return array;
 }
-
-const array2=[2,4,false,"false","false","",NaN,2,true,undefined];
-console.log (compact(array2));
+function intersection(array1, array2, isStrict){
+    if(isStrict){
+        let arrayMarge=[];
+        array1.forEach(element => {
+            array2.forEach(element2 => {
+                if(element===element2){
+                    arrayMarge.push(element);
+                }
+            });
+        });
+        return arrayMarge;
+    }
+}
 console.log (calc("2",3,"*"));
 console.log(size("322"));
 console.log(castArray(null));
+console.log(intersection([1,"3"],[1,3],true));
+

@@ -9,7 +9,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nederrgo/BamadashNeder.git"
-  },
+
+  },"type": "module",
   "author": "",
   "license": "ISC",
   "bugs": {
